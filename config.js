@@ -6,27 +6,27 @@ const STORY = {
   tagline: "A little corner of the internet, just for us.",
   photos: [
     {
-      src: "./img/Christmas.jpg",
+      src: "img/Christmas.jpg",
       caption: "Our first Christmas we spent together as a couple",
     },
     {
-      src: "./img/Halloween.jpg",
+      src: "img/Halloween.jpg",
       caption: "Boo! spendy our spooky times together",
     },
     {
-      src: "./img/Smile.jpg",
+      src: "img/Smile.jpg",
       caption: "She's about to take picture!!, say cheese",
     },
     {
-      src: "./img/Food.jpg",
+      src: "img/Food.jpg",
       caption: "A table for two, just the two of us :>",
     },
     {
-      src: "./img/Drawing.jpg",
+      src: "img/Drawing.jpg",
       caption: "I will be honest, I helped you like 15%",
     },
     {
-      src: "./img/Movie.jpg",
+      src: "img/Movie.jpg",
       caption: "Can you guess what we were going to watch?",
       hint: "Hint: Spiderman x Jean grey",
     },

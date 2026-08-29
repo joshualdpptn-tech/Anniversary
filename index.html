@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var path = location.pathname;
+        var last = path.split("/").pop();
+        var dir;
+        if (/\/$/.test(path)) dir = path;
+        else if (last.indexOf(".") !== -1) dir = path.slice(0, path.lastIndexOf("/") + 1);
+        else dir = path + "/";
+        document.write('<base href="' + dir + '">');
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Anniversary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

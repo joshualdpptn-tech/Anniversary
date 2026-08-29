@@ -28,13 +28,19 @@ STORY.moments.forEach((moment) => {
   timeline.append(item);
 });
 
+function assetUrl(path) {
+  const relative = String(path).replace(/^\.\//, "").replace(/^\//, "");
+  return new URL(relative, document.baseURI).href;
+}
+
 STORY.photos.forEach((photo, index) => {
   const figure = document.createElement("button");
   figure.className = "polaroid";
   figure.style.setProperty("--tilt", `${index % 2 === 0 ? -3 : 3.4}deg`);
   figure.type = "button";
-  figure.innerHTML = `<img src="${photo.src}" alt="${photo.caption}" /><figcaption>${photo.caption}</figcaption>`;
-  figure.addEventListener("click", () => openLightbox(photo));
+  const src = assetUrl(photo.src);
+  figure.innerHTML = `<img src="${src}" alt="${photo.caption}" /><figcaption>${photo.caption}</figcaption>`;
+  figure.addEventListener("click", () => openLightbox({ ...photo, src }));
   galleryGrid.append(figure);
 });
 
